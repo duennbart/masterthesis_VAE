@@ -1,0 +1,18 @@
+{
+  "model_name": "SpatialVAE161632adpt",
+    "latent_feature_maps": 32,
+  "latent_feature_size": 16,
+  "channels": [16,32, 64,128, 256],
+  "learning_rate":0.0002,
+  "epochs":300,
+  "start_epoch": 0,
+ "batch_size":32,
+  "logger_interval": 1,
+  "input_height": 256,
+  "input_weidth":256,
+  "thesis_logger_path":  "/home/stefan/Desktop/Stefan/mastherthesiseval/experiments",
+  "train_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train",
+  "train_dataroot_4imgs":"/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train_thesis",
+  "val_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val_thesis",
+  "val_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val"
+}

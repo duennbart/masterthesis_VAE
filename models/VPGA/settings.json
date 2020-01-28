@@ -1,0 +1,21 @@
+{
+  "model_name": "VPGA",
+  "latent_space": 50,
+  "channels": [8,16,32, 64,128, 256],
+  "learning_rate":0.01,
+  "zn_rec_coeff": 3e-2,
+  "zh_rec_coeff": 1e-2,
+  "vrec_coeff": 1e-2,
+  "vkld_coeff": 2e-5,
+  "epochs":301,
+  "start_epoch": 1,
+ "batch_size":16,
+  "input_height": 256,
+  "thesis_logger_path":  "/home/stefan/Desktop/Stefan/mastherthesiseval/experiments",
+  "train_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train",
+  "val_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val",
+  "train_dataroot_4imgs":"/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train_thesis",
+  "val_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val_thesis",
+  "pretrained_model_path": false,
+  "tensorboard": false
+}

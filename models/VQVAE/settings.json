@@ -1,0 +1,19 @@
+{
+  "model_name": "VQVAEadapt",
+  "latent_space": 50,
+  "channels": [ 64,128, 256],
+  "embedding_dim": 32,
+  "num_embeddings": 512,
+  "learning_rate": 1e-3,
+  "epochs":300,
+  "start_epoch": 1,
+ "batch_size":32,
+  "input_height": 256,
+  "thesis_logger_path":  "/home/stefan/Desktop/Stefan/mastherthesiseval/experiments",
+  "train_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train",
+  "val_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val",
+  "train_dataroot_4imgs":"/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train_thesis",
+  "val_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val_thesis",
+  "pretrained_model_path": false,
+  "tensorboard": false
+}
