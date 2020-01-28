@@ -10,7 +10,7 @@ Over the last few years deep learning models have achieved great success to impr
 5. Introspective Variational Autoencoder (IntroVAE) [[5]](#5)
 
 ## Structure of this repository
-In the directory experiments are the results for each training run. The directory general contains different util methods for the implementation. In the model folder, the five different models are implemented using the same architecture. The figures and plots for the thesis are created with the some utillity files in the thesis_util directory. 
+The directory general contains different util methods for the implementation. In the model folder the five different models are implemented using the same architecture. The figures and plots for the thesis are created with the utillity files in the thesis_util directory. 
 ## References
 <a id="1">[1]</a> 
 Diederik P. Kingma and Max Welling. Auto-encoding variational bayes. URL
