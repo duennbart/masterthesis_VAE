@@ -1,3 +1,6 @@
 /venv/
 .idea/
 models/VAE/.ipynb_checkpoints/
+/pip
+*.pyc
+/pip3
