@@ -1,1 +1,22 @@
-{"model_name": "VAE", "latent_space": 50, "channels": [8, 16, 32, 64, 128, 256], "learning_rate": 0.0002, "epochs": 300, "batch_size": 32, "input_height": 256, "input_weidth": 256, "thesis_logger_path": "/home/stefan/Desktop/Stefan/mastherthesiseval/experiments", "train_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train", "train_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train_thesis", "val_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val_thesis", "val_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val"}
+{
+  "model_name": "VAE",
+  "latent_space": 50,
+  "channels": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "learning_rate": 0.0002,
+  "epochs": 300,
+  "batch_size": 32,
+  "input_height": 256,
+  "input_weidth": 256,
+  "thesis_logger_path": "/home/stefan/Desktop/Stefan/mastherthesiseval/experiments",
+  "train_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train",
+  "train_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/train_thesis",
+  "val_dataroot_4imgs": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val_thesis",
+  "val_dataroot": "/home/biomech/Documents/OsteoData/KneeXrayData/ClsKLData/kneeKL299_2/val"
+}
