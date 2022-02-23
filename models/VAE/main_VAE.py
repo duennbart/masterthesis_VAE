@@ -90,16 +90,11 @@ def main():
     if torch.cuda.is_available() and not opt.cuda:
         print("WARNING: You have a CUDA device, so you should probably run with --cuda")
 
-        
-    is_scale_back = False
-    inp_channel = settings['channels']
-    #channels = str_to_list(inp_channel)
-    channels = inp_channel
     #--------------build models -------------------------
-    model = VAE(cdim=1, hdim=settings['latent_space'], channels=channels, image_size=settings['input_height']).cuda()
+    model = VAE(cdim=1, hdim=settings['latent_space'], channels=settings['channels'], image_size=settings['input_height']).cuda()
     if opt.pretrained:
         load_model(model, opt.pretrained)
-    #print(model)
+
             
     optimizerE = optim.Adam(model.encoder.parameters(), lr=settings['learning_rate'])
     optimizerG = optim.Adam(model.decoder.parameters(), lr=settings['learning_rate'])
@@ -123,14 +118,12 @@ def main():
         if len(batch.size()) == 3:
             batch = batch.unsqueeze(0)
 
-        real= Variable(batch).cuda()
-
+        real = Variable(batch).cuda()
         loss_info = '[loss_rec, loss_kl]'
             
         #=========== Update E ================                  
         real_mu, real_logvar, z, rec = model(real) 
-        input_img = real.data
-        loss_rec =  model.reconstruction_loss(rec, real, True)
+        loss_rec = model.reconstruction_loss(rec, real, True)
 
         loss_kl = model.kl_loss(real_mu, real_logvar).mean()
                     

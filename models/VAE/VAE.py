@@ -1,15 +1,21 @@
 # BSD 3-Clause License
 # Copyright (c) 2019, Stefan Dünhuber
 # Implementing the Variational Autoencoder  proposed by Kingma et al.:  https://arxiv.org/abs/1312.6114
-
 import torch
-import torch.nn.functional as F
 import torch.nn as nn
 from torch.autograd import Variable
-from general.utilPytorch.networks import Encoder,Decoder
+from general.utilPytorch.networks import Encoder, Decoder
+
 
 class VAE(nn.Module):
     def __init__(self, cdim=3, hdim=512, channels=[64, 128, 256, 512, 512, 512], image_size=256):
+        """
+        Args:
+            cdim: number of colour channels
+            hdim: dimension of latent space
+            channels: Channels of CNN layers
+            image_size: image size
+        """
         super(VAE, self).__init__()
         self.image_size = image_size
         self.channels = channels
@@ -26,7 +32,6 @@ class VAE(nn.Module):
 
     def forward(self, x):
         mu, logvar = self.encode(x)
-
         z = self.reparameterize(mu, logvar)
         y = self.decode(z)
         return mu, logvar, z, y
@@ -39,7 +44,6 @@ class VAE(nn.Module):
         z_e = self.encoder(x)
         z_e = z_e.view(z_e.size(0), -1)
         z_e = self.fc_en(z_e)
-
         mu, logvar = z_e.chunk(2, dim=1)
         return mu, logvar
 
@@ -76,5 +80,3 @@ class VAE(nn.Module):
             error = error.sum()
 
         return error
-
-

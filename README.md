@@ -11,6 +11,21 @@ Over the last few years deep learning models have achieved great success to impr
 
 ## Structure of this repository
 The directory general contains different util methods for the implementation. In the model folder the five different models are implemented using the same architecture. The figures and plots for the thesis are created with the utillity files in the thesis_util directory. 
+## Playing around with the laten space of IntroVAE
+prerequisites:  Python 3.7 installed
+1. Install required python packages
+```
+$ pip install -r requirements.txt
+```
+2.  Start JupyterLab 
+```
+$ jupyter-lab
+```
+3. Navigate to Jupyter Notebook
+```
+models/IntroVae/IntroVAE_latent_space_interactive.ipynb
+```
+4. set the path of your project in the path2project variable
 ## References
 <a id="1">[1]</a> 
 Diederik P. Kingma and Max Welling. Auto-encoding variational bayes. URL
